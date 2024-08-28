@@ -6,12 +6,12 @@ const DummyMapComponent = () => {
   const dropdownRef = useRef(null);
 
   const maps = {
-    default: 'https://media.discordapp.net/attachments/1135133573620449354/1278435611207925821/IMG-20240828-WA0047.jpg?ex=66d0cb71&is=66cf79f1&hm=74e1a5da1218a6c00a100fa39116984758fa1d04422185fc9bf3c22bc6b08cea&=&format=webp&width=990&height=570',
-    'Train status': 'https://media.discordapp.net/attachments/1135133573620449354/1278435610972913755/IMG-20240828-WA0045.jpg?ex=66d0cb71&is=66cf79f1&hm=93355ad4e411659cf7b225e0df33a1e7dda06ea99bbbaab0624003544f44ae64&=&format=webp&width=781&height=570',
-    'Ticket counter': 'https://media.discordapp.net/attachments/1135133573620449354/1278435610746687498/IMG-20240828-WA0046.jpg?ex=66d0cb71&is=66cf79f1&hm=2abfe512946fe1dad14095415b12dbdb807ce63612ebefa2957ee4d79d54b142&=&format=webp&width=1089&height=570',
-    'Waiting Room': 'https://media.discordapp.net/attachments/1135133573620449354/1278435611774156913/IMG-20240828-WA0051.jpg?ex=66d0cb72&is=66cf79f2&hm=f86e75ebba0d3c095a4d03a3e0fe06fa904a76d9e2f775e0268eee214f920ba3&=&format=webp&width=875&height=570',
-    'Luggage Room': 'https://media.discordapp.net/attachments/1135133573620449354/1278435611484618774/IMG-20240828-WA0049.jpg?ex=66d0cb71&is=66cf79f1&hm=a2fb6725fab8a13a745911b407843243a6ae9fa5f7b82db44cbeccce6e78a03f&=&format=webp&width=1049&height=570',
-    'Cafeteria': 'https://media.discordapp.net/attachments/1135133573620449354/1278435610520064070/IMG-20240828-WA0052.jpg?ex=66d0cb71&is=66cf79f1&hm=fe83e1529f2f7e1e748a1c8f6bfd301b0427b27944cb9f50a67e1be9e2edc778&=&format=webp&width=1067&height=570',
+    default: 'https://media.discordapp.net/attachments/1071688106190831658/1278443526312693861/default_map.jpg?ex=66d0d2d1&is=66cf8151&hm=d7329c7048c9ac2a422d14537a6b3d3a234d8d59f0fb7300bedf7ad3a135d4b1&=&format=webp&width=328&height=569',
+    'Train status': 'https://media.discordapp.net/attachments/1071688106190831658/1278443526547308685/cafeteria_map.jpg?ex=66d0d2d1&is=66cf8151&hm=bbe5785d4101d15ae4006dd7273aee7859a8587013a625e6a6bbdec44ba7453f&=&format=webp&width=305&height=570',
+    'Ticket counter': 'https://media.discordapp.net/attachments/1071688106190831658/1278443526811811982/ticket_map.jpg?ex=66d0d2d1&is=66cf8151&hm=d24549cb2261d8deed7384c31bb0e65faddfeb82f296c3c1747fde6130586ff0&=&format=webp&width=298&height=570',
+    'Waiting Room': 'https://media.discordapp.net/attachments/1071688106190831658/1278443526811811982/ticket_map.jpg?ex=66d0d2d1&is=66cf8151&hm=d24549cb2261d8deed7384c31bb0e65faddfeb82f296c3c1747fde6130586ff0&=&format=webp&width=298&height=570',
+    'Luggage Room': 'https://media.discordapp.net/attachments/1071688106190831658/1278443527558402111/luggage_map.jpg?ex=66d0d2d1&is=66cf8151&hm=90cf0a1a201a5120798075f56240a63cc56f1543c58abdd81221e80924fe8e99&=&format=webp&width=309&height=570',
+    'Cafeteria': 'https://media.discordapp.net/attachments/1071688106190831658/1278443527071731763/wheel_map.jpg?ex=66d0d2d1&is=66cf8151&hm=88147ad75ed0fe742069f6f9a4495cd9404835a5a07cc3c5a00cf9bbf2f6a6cc&=&format=webp&width=416&height=570',
   };
 
   const toggleMenu = () => {
