@@ -73,7 +73,7 @@ const DummyMapComponent = () => {
               style={{ transition: 'transform 0.3s ease-out, opacity 0.3s ease-out' }}
             >
               <ul className="list-none text-black p-0 m-0">
-                <li className="p-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleMenuClick('Train status')}>Train status</li>
+                <li className="p-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleMenuClick('Train status')}>Wheel chair collection</li>
                 <li className="p-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleMenuClick('Ticket counter')}>Ticket counter</li>
                 <li className="p-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleMenuClick('Waiting Room')}>Waiting Room</li>
                 <li className="p-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleMenuClick('Luggage Room')}>Luggage Room</li>
