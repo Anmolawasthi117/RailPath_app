@@ -117,7 +117,7 @@ const DummyMapComponent = () => {
             backgroundImage: `url(${maps[selectedMap]})`,
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
+            backgroundSize: 'contain',
           }}
         >
           {/* <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center text-white text-xl font-bold">
