@@ -41,8 +41,8 @@ const DummyMapComponent = ({ selectedMap = 'default' }) => {
     };
   }, []);
 
-  return (
-    <div className="flex flex-col h-screen bg-gray-100">
+  return (  
+    <div onClick={closeMenu()} className="flex flex-col h-screen bg-gray-100">
       {/* Header */}
       <div className="bg-blue-500 text-white p-4 flex justify-between items-center relative shadow-md">
         <div className="text-lg font-bold">Rail Path</div>
