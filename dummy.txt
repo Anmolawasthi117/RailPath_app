@@ -1,0 +1,10 @@
+const maps = {
+    default: 'https://media.discordapp.net/attachments/1071688106190831658/1278443526312693861/default_map.jpg?ex=66d17b91&is=66d02a11&hm=33299ff083ec883679e22aa863043f7c2347522946289fb588f1c2ea98fcf19d&=&format=webp&width=328&height=569',
+    'Train status': 'https://media.discordapp.net/attachments/1071688106190831658/1278443526547308685/cafeteria_map.jpg?ex=66d17b91&is=66d02a11&hm=be82484d5158be20ed93971033ed0f07b11d362e8c3066b5971001fda519ee4e&=&format=webp&width=305&height=570',
+    'Ticket counter': 'https://media.discordapp.net/attachments/1071688106190831658/1278443526547308685/cafeteria_map.jpg?ex=66d17b91&is=66d02a11&hm=be82484d5158be20ed93971033ed0f07b11d362e8c3066b5971001fda519ee4e&=&format=webp&width=305&height=570',
+    'Waiting Room': 'https://media.discordapp.net/attachments/1071688106190831658/1278443527558402111/luggage_map.jpg?ex=66d17b91&is=66d02a11&hm=bc283d8cd8303b0f7d60bb14c387b7024d6c189cbf9a74af26c7eb333c8f1ed6&=&format=webp&width=309&height=570',
+    'Luggage Room': 'https://media.discordapp.net/attachments/1071688106190831658/1278443527306608711/waiting_map.jpg?ex=66d17b91&is=66d02a11&hm=a8f317c3520d38587581ca9a3024af29fad0b8d4be498f0af8cb83e45f42a197&=&format=webp&width=371&height=570',
+    'Cafeteria': 'https://media.discordapp.net/attachments/1071688106190831658/1278443527071731763/wheel_map.jpg?ex=66d17b91&is=66d02a11&hm=d60f98790d9143df5ed1c967d4453c49e2b14bb61f6da986b421a397163ae4cc&=&format=webp&width=416&height=570',
+  };
+
+  DummyMapComponent

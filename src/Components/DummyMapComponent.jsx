@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 
-// eslint-disable-next-line react/prop-types
 const DummyMapComponent = ({ selectedMap = 'default' }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -46,7 +47,7 @@ const DummyMapComponent = ({ selectedMap = 'default' }) => {
   return (
     <div className="flex flex-col h-screen bg-gray-100">
       {/* Header */}
-      <div className="bg-gray-800 text-white p-4 flex justify-between items-center relative shadow-md">
+      <div className="bg-gray-800 text-white p-4 flex justify-between items-center shadow-md">
         <div className="text-lg font-bold">Rail Path</div>
 
         {/* Hamburger Icon */}
@@ -87,24 +88,25 @@ const DummyMapComponent = ({ selectedMap = 'default' }) => {
         </div>
       </div>
 
-      {/* Map area */}
-      <div className="flex-1 bg-gray-300 relative">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${maps[selectedMap]})`,
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'contain',
-          }}
-        ></div>
+      {/* Map area with zoom and pan */}
+      <div className="flex-1 bg-gray-300 relative w-full">
+        <TransformWrapper>
+          <TransformComponent>
+            <img
+              src={maps[selectedMap]}
+              alt="Map"
+              className="w-full h-full object-contain sm:object-fill"
+            />
+          </TransformComponent>
+        </TransformWrapper>
       </div>
+
 
       {/* Footer */}
       <div className="bg-white p-4 flex justify-between items-center border-t border-gray-200 shadow-md">
         <div className="text-sm text-gray-500">Explore nearby</div>
         <button className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-colors">
-          Start Navigation now
+          Start Navigation
         </button>
       </div>
     </div>
