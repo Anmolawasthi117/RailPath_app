@@ -79,7 +79,7 @@ const DummyMapComponent = ({ selectedMap = "default" }) => {
           </button>
           {isMenuOpen && (
             <div
-              className="absolute left-[-87vw] mt-1  bg-white border w-[100vw] h-[92vh]  border-red-300  shadow-lg z-50 transition-transform transform opacity-100"
+              className="absolute left-[-87vw]   bg-white border w-[100vw] h-[92vh]  border-red-300  shadow-lg z-50 transition-transform transform opacity-100"
               style={{
                 transition: "transform 0.3s ease-out, opacity 0.3s ease-out",
               }}
