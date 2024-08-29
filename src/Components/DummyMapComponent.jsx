@@ -183,7 +183,7 @@ const DummyMapComponent = ({ selectedMap = "default" }) => {
         </form>
       </div>
 
-      <div className="flex h-[92vh] bg-gray-300  box-border ">
+      <div className="flex h-[84.5vh] bg-gray-300  box-border ">
         <img
           src={maps[selectedMap]}
           alt="Map"
