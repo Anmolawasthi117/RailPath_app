@@ -1,0 +1,1 @@
+https://media.discordapp.net/attachments/1071688106190831658/1278443527558402111/luggage_map.jpg?ex=66d17b91&is=66d02a11&hm=bc283d8cd8303b0f7d60bb14c387b7024d6c189cbf9a74af26c7eb333c8f1ed6&=&format=webp&width=309&height=570
