@@ -46,7 +46,7 @@ const DummyMapComponent = ({ selectedMap = "default" }) => {
   return (
     <div className="flex flex-col h-[100vh] bg-gray-100">
       <div className="bg-blue-500 text-white p-4  flex justify-between items-center h-[10%] shadow-md">
-        <div className="text-lg font-bold">Rail Path</div>
+        <div className="text-lg font-bold">RAILPATH</div>
 
         <div className="relative">
           <button
@@ -126,6 +126,13 @@ const DummyMapComponent = ({ selectedMap = "default" }) => {
           )}
         </div>
       </div>
+      <div className="p-4 bg-white shadow-md">
+        <input
+          type="text"
+          placeholder="Search for a place..."
+          className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+        />
+      </div>
 
       <div className="flex h-[80%%] bg-gray-300   ">
         <img
@@ -137,7 +144,7 @@ const DummyMapComponent = ({ selectedMap = "default" }) => {
           }}
         />
 
-        <div className="absolute top-[10%] right-4 flex flex-col space-y-2 z-10">
+        <div className="absolute top-48 right-4 flex flex-col space-y-2 z-10">
           <button className="p-2 bg-white rounded-full shadow hover:bg-gray-200 flex justify-center items-center">
             <img
               src="https://imgs.search.brave.com/RleXD8IHedCu7KRM40YHjmmHqfH2fnirQrrOoCe7VtQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZy/ZWVwaWsuY29tLzI1/Ni83MjY5LzcyNjk4/MzIucG5nP3NlbXQ9/YWlzX2h5YnJpZA"
