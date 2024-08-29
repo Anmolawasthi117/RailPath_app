@@ -43,11 +43,11 @@ const DummyMapComponent = ({ selectedMap = 'default' }) => {
 
   return (  
     <div  className="flex flex-col max-h-screen bg-gray-100">
-      {/* Header */}
+     
       <div className="bg-blue-500 text-white p-4 flex justify-between items-center relative shadow-md">
         <div className="text-lg font-bold">Rail Path</div>
 
-        {/* Hamburger Icon */}
+      
         <div className="relative">
           <button onClick={toggleMenu} className="focus:outline-none">
             <svg
@@ -66,7 +66,7 @@ const DummyMapComponent = ({ selectedMap = 'default' }) => {
             </svg>
           </button>
 
-          {/* Dropdown Menu */}
+        
           {isMenuOpen && (
             <div
               ref={dropdownRef}
@@ -85,7 +85,7 @@ const DummyMapComponent = ({ selectedMap = 'default' }) => {
         </div>
       </div>
 
-      {/* Map area */}
+      
       <div className="flex-1 bg-gray-300 relative">
         <img
           src={maps[selectedMap]}
@@ -96,7 +96,7 @@ const DummyMapComponent = ({ selectedMap = 'default' }) => {
           }}
         />
 
-        {/* Buttons on the Map */}
+       
         <div className="absolute top-4 right-4 flex flex-col space-y-2 z-10"> 
   <button className="p-2 bg-white rounded-full shadow hover:bg-gray-200 flex justify-center items-center">
     <img src="https://imgs.search.brave.com/RleXD8IHedCu7KRM40YHjmmHqfH2fnirQrrOoCe7VtQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZy/ZWVwaWsuY29tLzI1/Ni83MjY5LzcyNjk4/MzIucG5nP3NlbXQ9/YWlzX2h5YnJpZA" alt="" className='h-10 w-10' />
@@ -111,7 +111,7 @@ const DummyMapComponent = ({ selectedMap = 'default' }) => {
 
       </div>
 
-      {/* Footer */}
+    
       <div className="bg-white p-4 flex justify-between items-center border-t border-gray-200 shadow-md">
         <div className="text-sm text-gray-500">Explore nearby</div>
         <button className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-colors">
