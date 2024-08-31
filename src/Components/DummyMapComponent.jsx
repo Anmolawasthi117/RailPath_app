@@ -79,7 +79,7 @@ const DummyMapComponent = ({ selectedMap = "default" }) => {
           </button>
 
           <div
-            className="absolute left-[-82vw] flex top-36  w-[36vh] h-[5vh]    z-50 transition-transform transform opacity-100"
+            className="absolute left-[-82vw] flex top-36  w-[38vh] h-[5vh]    z-50 transition-transform transform opacity-100"
             style={{
               transition: "transform 0.3s ease-out, opacity 0.3s ease-out",
             }}
