@@ -6,6 +6,12 @@ import stationicon from "../icons/raiway_staion_icon.png";
 import ticketicon from "../icons/ticket_count_icon.png";
 import waitingicon from "../icons/waiting_room_icon.png";
 import wheelicon from "../icons/wheel_chair_icon.png";
+import cafeteriamap from "../assets/maps/cafeteriamap.jpg";
+import luggagemap from "../assets/maps/luggagemap.jpg";
+import stationmap from "../assets/maps/stationmap.jpg";
+import ticketmap from "../assets/maps/ticketmap.jpg";
+import waitingmap from "../assets/maps/waitingmap.jpg";
+import wheelmap from "../assets/maps/wheelmap.jpg";
 
 const DummyMapComponent = ({ selectedMap = "default" }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,19 +19,13 @@ const DummyMapComponent = ({ selectedMap = "default" }) => {
   const dropdownRef = useRef(null);
 
   const maps = {
-    default:
-      "https://media.discordapp.net/attachments/1071688106190831658/1278443526312693861/default_map.jpg?ex=66d17b91&is=66d02a11&hm=33299ff083ec883679e22aa863043f7c2347522946289fb588f1c2ea98fcf19d&=&format=webp&width=328&height=595",
-    wheelchair:
-      "https://media.discordapp.net/attachments/1071688106190831658/1278443527071731763/wheel_map.jpg?ex=66d17b91&is=66d02a11&hm=d60f98790d9143df5ed1c967d4453c49e2b14bb61f6da986b421a397163ae4cc&=&format=webp&width=483&height=877",
-    "Ticket counter":
-      "https://media.discordapp.net/attachments/1071688106190831658/1278443526547308685/cafeteria_map.jpg?ex=66d17b91&is=66d02a11&hm=be82484d5158be20ed93971033ed0f07b11d362e8c3066b5971001fda519ee4e&=&format=webp&width=353&height=640",
-    "Waiting Room":
-      "https://media.discordapp.net/attachments/1071688106190831658/1278443527306608711/waiting_map.jpg?ex=66d17b91&is=66d02a11&hm=a8f317c3520d38587581ca9a3024af29fad0b8d4be498f0af8cb83e45f42a197&=&format=webp&width=431&height=782",
+    default: stationmap,
+    wheelchair: wheelmap,
+    "Ticket counter": ticketmap,
+    "Waiting Room": waitingmap,
 
-    "Luggage Room":
-      "https://media.discordapp.net/attachments/1071688106190831658/1278443526811811982/ticket_map.jpg?ex=66d17b91&is=66d02a11&hm=ddc9f4392d73c0b44e9eaef8086723210bdb45468925612ed405a00a37b45424&=&format=webp&width=346&height=628",
-    Cafeteria:
-      "https://media.discordapp.net/attachments/1071688106190831658/1278443527558402111/luggage_map.jpg?ex=66d17b91&is=66d02a11&hm=bc283d8cd8303b0f7d60bb14c387b7024d6c189cbf9a74af26c7eb333c8f1ed6&=&format=webp&width=360&height=652",
+    "Luggage Room": luggagemap,
+    Cafeteria: cafeteriamap,
   };
 
   const closeMenu = () => {
@@ -51,11 +51,11 @@ const DummyMapComponent = ({ selectedMap = "default" }) => {
   }, []);
 
   return (
-    <div className="flex flex-col h-full bg-gray-100 box-border">
-      <div className="bg-[#0C0F47] text-white p-4  flex justify-between items-center h-[8vh] box-border ">
-        <div className="text-3xl font-bold">RAILPATH</div>
+    <div className=" flex-col h-full bg-gray-100 box-border">
+      <div className="bg-[#0C0F47] text-white p-4  flex justify-between items-center h-[8vh] box-border  ">
+        <div className="text-3xl font-bold">RAILपथ</div>
 
-        <div className="relative">
+        <div className="relative flex">
           <button
             onClick={() => {
               setIsMenuOpen(!isMenuOpen);
@@ -77,77 +77,91 @@ const DummyMapComponent = ({ selectedMap = "default" }) => {
               />
             </svg>
           </button>
-          {isMenuOpen && (
-            <div
-              className="absolute left-[-87vw]   bg-white border w-[100vw] h-[92vh]  border-red-300  shadow-lg z-50 transition-transform transform opacity-100"
-              style={{
-                transition: "transform 0.3s ease-out, opacity 0.3s ease-out",
-              }}
-            >
-              <ul className="list-none text-black p-0 m-0">
-                <li
-                  className="p-4 hover:bg-gray-100 cursor-pointer font-bold text-[1.5rem] flex "
-                  onClick={() => handleMenuClick("default", "/")}
-                >
-                  <img src={stationicon} alt="" className="h-10 w-10 mr-4" />
-                  Station Map
-                </li>
-                <div className="h-1 w-full bg-black"></div>
-                <li
-                  className="p-4 hover:bg-gray-100 cursor-pointer font-bold text-[1.5rem] flex items-center "
-                  onClick={() => handleMenuClick("wheelchair", "/wheelchair")}
-                >
-                  <img src={wheelicon} alt="" className="h-10 w-10 mr-4" />
-                  Wheel Chair Collection
-                </li>
-                <div className="h-1 w-full bg-black"></div>
-                <li
-                  className="p-4 hover:bg-gray-100 cursor-pointer font-bold text-[1.5rem] flex "
-                  onClick={() =>
-                    handleMenuClick("Ticket counter", "/ticket-counter")
-                  }
-                >
-                  <img src={ticketicon} alt="" className="h-10 w-10 mr-4" />
-                  Ticket Counter
-                </li>
 
-                <div className="h-1 w-full bg-black"></div>
-                <li
-                  className="p-4 hover:bg-gray-100 cursor-pointer font-bold text-[1.5rem] flex "
-                  onClick={() =>
-                    handleMenuClick("Waiting Room", "/waiting-room")
-                  }
-                >
-                  <img src={waitingicon} alt="" className="h-10 w-10 mr-4" />
-                  Waiting Room
-                </li>
+          <div
+            className="absolute left-[-82vw] flex top-36  w-[36vh] h-[5vh]    z-50 transition-transform transform opacity-100"
+            style={{
+              transition: "transform 0.3s ease-out, opacity 0.3s ease-out",
+            }}
+          >
+            <ul className="list-none text-black p-0 flex m-0 overflow-scroll no-scrollbar">
+              <li
+                className="p-4 hover:bg-gray-100 cursor-pointer font-bold text-[0.5rem] mr-2 rounded-full justify-center items-center bg-white w-[40%] flex-shrink-0  flex border border-red-100 "
+                onClick={() => handleMenuClick("default", "/")}
+              >
+                <img
+                  src={stationicon}
+                  alt=""
+                  className="w-[30%] mr-4 flex-shrink-0  "
+                />
+                Station Map
+              </li>
+              <li
+                className="p-4 hover:bg-gray-100 cursor-pointer font-bold text-[0.5rem] mr-2 rounded-full justify-center items-center bg-white w-[40%] flex-shrink-0  flex border border-red-100  "
+                onClick={() => handleMenuClick("wheelchair", "/wheelchair")}
+              >
+                <img
+                  src={wheelicon}
+                  alt=""
+                  className="w-[30%] mr-4 flex-shrink-0 "
+                />
+                Wheel Chair Collection
+              </li>
 
-                <div className="h-1 w-full bg-black"></div>
-                <li
-                  className="p-4 hover:bg-gray-100 cursor-pointer font-bold text-[1.5rem] flex"
-                  onClick={() =>
-                    handleMenuClick("Luggage Room", "/luggage-room")
-                  }
-                >
-                  <img src={luggageicon} alt="" className="h-10 w-10 mr-4" />
-                  Luggage Room
-                </li>
+              <li
+                className="p-4 hover:bg-gray-100 cursor-pointer font-bold text-[0.5rem] mr-2 rounded-full justify-center items-center bg-white w-[40%] flex-shrink-0  flex border border-red-100  "
+                onClick={() =>
+                  handleMenuClick("Ticket counter", "/ticket-counter")
+                }
+              >
+                <img
+                  src={ticketicon}
+                  alt=""
+                  className="w-[30%] mr-4 flex-shrink-0  "
+                />
+                Ticket Counter
+              </li>
 
-                <div className="h-1 w-full bg-black"></div>
-                <li
-                  className="p-4 hover:bg-gray-100 cursor-pointer font-bold text-2xl flex"
-                  onClick={() => handleMenuClick("Cafeteria", "/cafeteria")}
-                >
-                  <img src={cafeicon} alt="" className="h-10 w-10 mr-4" />
-                  Cafeteria
-                </li>
-                <div className="h-1 w-full bg-black"></div>
-              </ul>
-            </div>
-          )}
+              <li
+                className="p-4 hover:bg-gray-100 cursor-pointer font-bold text-[0.5rem] mr-2 rounded-full justify-center items-center bg-white w-[40%] flex-shrink-0  flex border border-red-100  "
+                onClick={() => handleMenuClick("Waiting Room", "/waiting-room")}
+              >
+                <img
+                  src={waitingicon}
+                  alt=""
+                  className="w-[30%] mr-4 flex-shrink-0 "
+                />
+                Waiting Room
+              </li>
+
+              <li
+                className="p-4 hover:bg-gray-100 cursor-pointer font-bold text-[0.5rem] mr-2 rounded-full justify-center items-center bg-white w-[40%] flex-shrink-0  flex border border-red-100 "
+                onClick={() => handleMenuClick("Luggage Room", "/luggage-room")}
+              >
+                <img
+                  src={luggageicon}
+                  alt=""
+                  className="w-[30%] mr-4 flex-shrink-0 "
+                />
+                Luggage Room
+              </li>
+
+              <li
+                className="p-4 hover:bg-gray-100 cursor-pointer font-bold text-[0.5rem] mr-2 rounded-full justify-center items-center bg-white w-[40%] flex-shrink-0  flex border border-red-100 "
+                onClick={() => handleMenuClick("Cafeteria", "/cafeteria")}
+              >
+                <img
+                  src={cafeicon}
+                  alt=""
+                  className="w-[30%] mr-4 flex-shrink-0 "
+                />
+                Cafeteria
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div className="p-4 h-[10vh] mt-16 w-full z-10 box-border absolute">
+      <div className="p-4 h-[10vh] mt-2 w-full z-10 box-border absolute">
         <form className="flex items-center max-w-sm mx-auto">
           <div className="relative w-full">
             <input
@@ -182,11 +196,11 @@ const DummyMapComponent = ({ selectedMap = "default" }) => {
         </form>
       </div>
 
-      <div className="flex h-[84.5vh] bg-gray-300  box-border ">
+      <div className="flex h-[84.5vh] bg-gray-300 justify-center box-border ">
         <img
           src={maps[selectedMap]}
           alt="Map"
-          className="w-full h-full object-fill"
+          className="w-full border border-red-500  h-full object-fill"
           style={{
             zIndex: 1,
           }}
